@@ -6,11 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludwig Classic Maple</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Responsive styles for phones */
+        @media only screen and (max-width: 767px) {
+            .cta-btn--hero {
+                background-image: none;
+                border: 2px solid #A890FE;
+                -webkit-text-fill-color: #A890FE;
+            }
+
+            .cta-btn--hero:hover {
+                -webkit-text-fill-color: #A890FE;
+            }
+
+            .cta-btn--hero::after {
+                background-image: none;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <h1>Ludwig Classic Maple</h1>
     <img src="Drum1.jpg">
 
+    <a href="https://www.google.com/search?q=ludwig+classic+maple+black+sparkle+drum+set&sca_esv=7e45bdb8bcbd2225&rlz=1C1IPOA_enUS704&biw=1280&bih=613&ei=n2S0Zen8Oc60qtsP_tOFmAM&ved=0ahUKEwipyKajvfyDAxVOmmoFHf5pATMQ4dUDCBA&uact=5&oq=ludwig+classic+maple+black+sparkle+drum+set&gs_lp=Egxnd3Mtd2l6LXNlcnAiK2x1ZHdpZyBjbGFzc2ljIG1hcGxlIGJsYWNrIHNwYXJrbGUgZHJ1bSBzZXQyBRAhGKsCSLkiUFBY4B5wAXgAkAEAmAH3BKAB2weqAQcwLjMuNS0xuAEDyAEA-AEBwgIOEAAYgAQYigUYhgMYsAPCAgwQIRgKGKABGMMEGArCAggQABiABBiiBOIDBBgBIEGIBgGQBgI&sclient=gws-wiz-serp">
+        <!-- Use only the cta-btn--hero class for styling -->
+        <button class="cta-btn--hero" role="button" style="text-align: center;">Google</button>
+    </a>
 </body>
 </html>
