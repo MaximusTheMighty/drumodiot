@@ -69,3 +69,39 @@ p{
     font-size: 1.25rem;
   }
 }
+
+/*CSS FOR drumsetsmain.html: */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.btn-group {
+  /* Center the button group */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-group a {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  text-decoration: none; /* Remove underline from links */
+  margin: 5px; /* Add margin for spacing between buttons */
+}
+
+.btn-group a:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group a:hover {
+  background-color: #3e8e41;
+}
