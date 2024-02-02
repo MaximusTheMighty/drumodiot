@@ -5,21 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drumodiot</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .btn-group a {
+            background-color: #04AA6D; /* Green background */
+            border: 1px solid green; /* Green border */
+            color: white; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            float: left; /* Float the buttons side by side */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        /* Clear floats (clearfix hack) */
+        .btn-group:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .btn-group a:not(:last-child) {
+            border-right: none; /* Prevent double borders */
+        }
+
+        /* Add a background color on hover */
+        .btn-group a:hover {
+            background-color: #3e8e41;
+        }
+    </style>
 </head>
 
 <body>
     <!-- ALL CODE FOR BUTTONS STARTS HERE-->
-    <div class="button-group">
-    <a href="drumsets1.html" class="button-53" role="button">Ludwig Classic Maple</a>
-    <a href="drumsets2.html" class="button-53" role="button">Candy Blue Azure</a>
-    <a href="drumsets3.html" class="button-53" role="button">Curly Maple Burst</a>
-    <a href="drumsets4.html" class="button-53" role="button">Crystal Ice</a>
-    <a href="drumsets5.html" class="button-53" role="button">Mapex Armory</a>
-    <a href="drumsets6.html" class="button-53" role="button">SilverStar</a>
-    <a href="drumsets7.html" class="button-53" role="button">Pearl Decade Maple</a>
-    <a href="drumsets8.html" class="button-53" role="button">Kobalt Blue Fade</a>
-    <a href="drumsets9.html" class="button-53" role="button">Ruby Oyster</a> 
+    <div class="btn-group">
+        <a href="drumsets1.html" class="button-53" role="button">Ludwig Classic Maple</a>
+        <a href="drumsets2.html" class="button-53" role="button">Candy Blue Azure</a>
+        <a href="drumsets3.html" class="button-53" role="button">Curly Maple Burst</a>
+        <a href="drumsets4.html" class="button-53" role="button">Crystal Ice</a>
+        <a href="drumsets5.html" class="button-53" role="button">Mapex Armory</a>
+        <a href="drumsets6.html" class="button-53" role="button">SilverStar</a>
+        <a href="drumsets7.html" class="button-53" role="button">Pearl Decade Maple</a>
+        <a href="drumsets8.html" class="button-53" role="button">Kobalt Blue Fade</a>
+        <a href="drumsets9.html" class="button-53" role="button">Ruby Oyster</a> 
     <!-- ALL CODE FOR BUTTONS ENDS HERE-->
     </div>
 </body>
