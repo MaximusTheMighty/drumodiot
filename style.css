@@ -158,16 +158,16 @@ p {
 }
 
 .cta-btn--resume {
-  color: #da4b4b;
+  color: #ff1111;
   border: 2px solid #fff
 }
 
 .cta-btn--resume:after {
-  background: #b005d6
+  background: #c3b5ff
 }
 
 .cta-btn--resume:hover {
-  color: #da4b4b;
+  color: #fd9292;
   text-decoration: none
 }
 
