@@ -72,32 +72,113 @@ p {
   }
 }
 
-/* BUTTON CODE (BETTER LOOKIN) */
+
+/* Fancy buttons */
+.cta-btn {
+  z-index: 1;
+  padding: .8rem 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: all .6s cubic-bezier(.19,1,.22,1);
+  display: inline-block;
+  position: relative
+}
+
+.cta-btn:after {
+  content: "";
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: all .3s cubic-bezier(.19,1,.22,1);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0
+}
 
 .cta-btn--hero {
-  border-width: 2px;
+  color: #fd9292;
+  -webkit-text-fill-color: #fd9292;
+  -webkit-border-image-slice: 1;
   border-style: solid;
-  background: linear-gradient(135deg, #EA8D8D 0%, #A890FE 100%);
-  border-image: linear-gradient(135deg, #EA8D8D 0%, #A890FE 100%);
-  border-image-slice: 1;
-  color: #A890FE; /* Default text color */
+  border-width: 2px;
+  border-image: linear-gradient(135deg,#ff4e4e 0%,#fd9292 100%) 1
 }
 
-.cta-btn--hero:hover {
-  color: #FFFFFF;
-  -webkit-text-fill-color: #FFFFFF;
-  text-decoration: none;
-}
-
-/* Responsive styles for phones */
-@media only screen and (max-width: 767px) {
+@supports (-webkit-background-clip: text) or (background-clip: text) {
   .cta-btn--hero {
-    background-image: none;
-    border: 2px solid #A890FE;
-    color: #A890FE; /* Text color for phones */
+      background-image:linear-gradient(135deg,#ff4e4e 0%,#fd9292 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #0000
+  }
+}
+
+@media screen and (-ms-high-contrast:active),screen and (-ms-high-contrast:none) {
+  .cta-btn--hero {
+      color: #fd9292!important
   }
 
   .cta-btn--hero:hover {
-    color: #A890FE;
+      color: #fff!important
   }
+}
+
+@media (max-width: 37.5em) {
+  .cta-btn--hero {
+      -webkit-text-fill-color:#fd9292;
+      background-image: none;
+      border: 2px solid #fd9292
+  }
+}
+
+.cta-btn--hero:after {
+  background-image: linear-gradient(135deg,#ff4e4e 0%,#fd9292 100%)
+}
+
+@media (max-width: 37.5em) {
+  .cta-btn--hero:after {
+      background-image:none
+  }
+}
+
+.cta-btn--hero:hover {
+  -webkit-text-fill-color: #fff;
+  text-decoration: none
+}
+
+@media (max-width: 37.5em) {
+  .cta-btn--hero:hover {
+      -webkit-text-fill-color:#fd9292
+  }
+}
+
+.cta-btn--hero:hover:after {
+  width: 100%
+}
+
+.cta-btn--resume {
+  color: #da4b4b;
+  border: 2px solid #fff
+}
+
+.cta-btn--resume:after {
+  background: #04e5de
+}
+
+.cta-btn--resume:hover {
+  color: #fd9292;
+  text-decoration: none
+}
+
+.cta-btn--resume:hover:after {
+  width: 100%
+}
+
+
+.btn-group {
+  /* Center the button group */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
