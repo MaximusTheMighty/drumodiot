@@ -163,11 +163,11 @@ p {
 }
 
 .cta-btn--resume:after {
-  background: #04e5de
+  background: #b005d6
 }
 
 .cta-btn--resume:hover {
-  color: #ff9090;
+  color: #fd9292;
   text-decoration: none
 }
 
