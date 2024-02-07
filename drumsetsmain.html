@@ -7,20 +7,115 @@
     <title>Drumodiot</title>
 </head>
 <style>
-    .cta-btn--hero {
-        background-color: #c3b5ff;
-        border: 0 solid azure;
-        color: #000000;
-        text-align: center;
-        text-decoration: none #000000 solid;
-        text-decoration-thickness: auto;
-    }
-    @media (min-width: 768px) {
-        .cta-btn--hero {
-            padding: .75rem 3rem;
-            font-size: 4rem;
-        }
-    }
+    .cta-btn {
+  z-index: 1;
+  padding: .8rem 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: all .6s cubic-bezier(.19,1,.22,1);
+  display: inline-block;
+  position: relative
+}
+
+.cta-btn:after {
+  content: "";
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: all .3s cubic-bezier(.19,1,.22,1);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0
+}
+
+.cta-btn--hero {
+  color: #fd9292;
+  -webkit-text-fill-color: #fd9292;
+  -webkit-border-image-slice: 1;
+  border-style: solid;
+  border-width: 2px;
+  border-image: linear-gradient(135deg,#ff4e4e 0%,#fd9292 100%) 1
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .cta-btn--hero {
+      background-image:linear-gradient(135deg,#ff4e4e 0%,#fd9292 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #0000
+  }
+}
+
+@media screen and (-ms-high-contrast:active),screen and (-ms-high-contrast:none) {
+  .cta-btn--hero {
+      color: #fd9292!important
+  }
+
+  .cta-btn--hero:hover {
+      color: #fff!important
+  }
+}
+
+@media (max-width: 37.5em) {
+  .cta-btn--hero {
+      -webkit-text-fill-color:#fd9292;
+      background-image: none;
+      border: 2px solid #fd9292
+  }
+}
+
+.cta-btn--hero:after {
+  background-image: linear-gradient(135deg,#ff4e4e 0%,#fd9292 100%)
+}
+
+@media (max-width: 37.5em) {
+  .cta-btn--hero:after {
+      background-image:none
+  }
+}
+
+.cta-btn--hero:hover {
+  -webkit-text-fill-color: #fff;
+  text-decoration: none
+}
+
+@media (max-width: 37.5em) {
+  .cta-btn--hero:hover {
+      -webkit-text-fill-color:#fd9292
+  }
+}
+
+.cta-btn--hero:hover:after {
+  width: 100%
+}
+
+.cta-btn--resume {
+  color: #ff1111;
+  border: 2px solid #fff
+}
+
+.cta-btn--resume:after {
+  background: #c3b5ff
+}
+
+.cta-btn--resume:hover {
+  color: #fd9292;
+  text-decoration: none
+}
+
+.cta-btn--resume:hover:after {
+  width: 100%
+}
+
+
+.btn-group {
+  /* Center the button group */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 </style>
 <body>
     <!-- ALL CODE FOR BUTTONS STARTS HERE-->
